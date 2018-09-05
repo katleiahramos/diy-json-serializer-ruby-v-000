@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update]
+
   def body
     post = Post.find(params[:id])
     render json: PostSerializer.serialize(post)
